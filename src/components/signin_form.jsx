@@ -1,42 +1,28 @@
 import React, { Component } from 'react';
 
-const [username, setUsername] = useState("");
-const [password, setPassword] = useState("");
+class SigninForm extends Component {
+  render(){
+    <Form>
+      <Form.Group controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
 
-function performValidation() {
-  return username.length > 0 && password.length > 0;
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-}
-
-return (
-<div className="Login">
-<form onSubmit={handleSubmit}>
-<FormGroup controlId="username" bsSize="large">
-  <ControlLabel>Email or Phone*</ControlLabel>
-<FormControl
-autoFocus
-type="text"
-value={username}
-onChange={e => setUsername(e.target.value)}
-/>
-</FormGroup>
-<FormGroup controlId="password" bsSize="large">
-<ControlLabel>Password</ControlLabel>
-<FormControl
-value={password}
-onChange={e => setPassword(e.target.value)}
-type="password"
-/>
-</FormGroup>
-<Button block bsSize="large" disabled={!performValidation()} type="submit">
-Login
-</Button>
-</form>
-</div>
-);
+    <Form.Group controlId="formBasicPassword">
+      <Form.Label>Password</Form.Label>
+      <Form.Control type="password" placeholder="Password" />
+    </Form.Group>
+    <Form.Group controlId="formBasicCheckbox">
+      <Form.Check type="checkbox" label="Check me out" />
+    </Form.Group>
+    <Button variant="primary" type="submit">
+      Submit
+    </Button>
+  </Form>
+  }
 }
 
 
