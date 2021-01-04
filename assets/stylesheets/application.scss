@@ -17,4 +17,18 @@ body {
   justify-content: center;
   box-shadow: 0 0 20 5 #000 10%;
   color: black;
+  width: 500px;
+  height: 600px;
+  border: black;
+  border-radius: 8px;
+}
+
+.Login {
+  padding: 60px 60px 60px 120px;
+  border: none;
+  font-size: 2.6em;
+  box-shadow: none;
+  &:focus {
+    box-shadow: none;
+  }
 }
