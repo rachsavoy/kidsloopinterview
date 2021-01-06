@@ -1,24 +1,17 @@
-import React, from 'react';
-import {render} from "react-dom";
-import "bootstrap/dist/css/bootstrap.css";
+import React, { Component } from "react";
+import SigninForm from "./components/signin_form";
+import "./Login.css";
 
-import SigninForm from './signin_form';
-
-const App = () => (
-  <div>
-    <Card className="text-center">
-      <Card.Header>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-      <Card.Footer className="text-muted">2 days ago</Card.Footer>
-    </Card>
-  </div>
-);
-
+class App extends Component {
+  render() {
+    return(
+      <div className="card">
+        <img src="https://drive.google.com/file/d/1qsvlH1AkFNiCCEXvU7jC-eJ5CFHj1HJr/view?usp=sharing" alt="KidsLoop logo" />
+        <h4> Sign In</h4>
+        <SigninForm>
+      </div>
+    );
+  }
+}
 
 export default App;
